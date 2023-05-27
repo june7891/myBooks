@@ -8,11 +8,14 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MainController extends AbstractController
 {
-    #[Route('/reactRouting', name: 'app_main', defaults: ['reactRouting' => null])]
+    #[Route('/{reactRouting}', name: 'app_main', requirements:['reactRouting' => "^(?!api).+"], defaults: ['reactRouting' => null])]
     public function index(): Response
     {
         return $this->render('main/index.html.twig', [
             'controller_name' => 'MainController',
         ]);
     }
+
+
+
 }
