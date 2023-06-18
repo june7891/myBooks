@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');
 
 
-.login{
+.login, .register{
     display: flex;
     height: 100vh;
     flex-direction: column;
@@ -9,6 +9,13 @@
     text-align: center;
     justify-content: center;
 }
+
+
+.login .btn-primary {
+    width: 15rem;
+    margin: 0.5rem;
+}
+
 
 .login h2 {
     font-family: 'Monomaniac one';

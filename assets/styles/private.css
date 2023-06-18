@@ -1,0 +1,14 @@
+
+.cards-container {
+    display: flex;
+}
+
+.card-image {
+    height: 20rem;
+    width: 20rem;
+}
+
+.card-image img {
+    height: 100%;
+    border-radius: 1rem;
+}

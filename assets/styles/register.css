@@ -1,0 +1,24 @@
+
+
+.register .btn-primary {
+    width: 15rem;
+    margin: 0.5rem;
+}
+
+
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signup-form input {
+    width: 15rem;
+    height: 2.5rem;
+    margin: 0.5rem;
+    border-radius: 0.8rem;
+}
+
+.validation-msg {
+    color:red;
+}

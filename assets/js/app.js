@@ -9,6 +9,8 @@
 
 import '../styles/app.css';
 import '../styles/login.css';
+import '../styles/register.css';
+import '../styles/private.css';
 import '../styles/navbar.css';
 
     

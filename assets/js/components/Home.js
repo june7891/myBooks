@@ -3,6 +3,11 @@ import Login from './Login';
 import { createRoot } from "react-dom/client";
 import {BrowserRouter as Router, Routes, Route, Redirect, Link} from 'react-router-dom';
 import Homepage from './Homepage';
+import Register from './Register';
+import Dashboard from '../pages/dashboard';
+import Private from '../pages/Private/Private';
+import PrivateHome from '../pages/Private/PrivateHome/PrivateHome';
+import { UserContextProvider } from '../context/userContext';
 
 
 
@@ -14,6 +19,12 @@ function Home() {
     <Routes>
       <Route exact path="/" element={<Homepage />} />
       <Route exact path="/login" element={<Login/>}/>
+      <Route exact path="/dashboard" element={<Dashboard/>}/>
+      <Route exact path="/register" element={<Register/>}/>
+      <Route path="/private" element={<Private/>}>
+          <Route path='/private/private-home' element={<PrivateHome/>}></Route>
+
+      </Route>
     </Routes>
               
    </>
@@ -28,9 +39,14 @@ if (document.getElementById('root')) {
 
   root.render(
       // <StrictMode>
+      
         <Router>
+        <UserContextProvider>
           <Home />
+          </UserContextProvider>
           </Router>
+      
+        
       // </StrictMode>
   );
 }
